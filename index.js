@@ -48,6 +48,12 @@ executor = (req , res) =>
 
 app.get(`/vibhor`, executor)
 
+ post = (req ,res) =>
+ {
+    res.send(`This is a successful post request`)
+ }
+app.post("/post" , post)
+
 // This api request runs code foreven (until we close port) and listens requests
 
 listener = () =>
