@@ -102,3 +102,16 @@ post_html = (req ,res) =>
 }
 
 app.get(`/get/html` , post_html)
+
+Connecting_node = (req , res) =>
+{
+    let count = req.query.count
+
+    countObj = {
+        sum : calSum(count)
+    }
+
+    res.send(countObj)
+} 
+
+app.get(`/linking_another_node` , Connecting_node)
